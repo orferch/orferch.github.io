@@ -1,0 +1,94 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#game-board {
+    border: 2px solid #fff;
+    padding: 10px;
+    line-height: 1.2;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+#restart-button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 1.2em;
+}
+
+#color-selector select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#controls {
+    display: none; /* Hidden by default, shown via media query */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    user-select: none;
+}
+
+#controls button {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#middle-controls {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* Color Classes */
+.color-white { color: #FFFFFF; }
+.color-blue { color: #00BFFF; }
+.color-green { color: #32CD32; }
+.color-red { color: #FF4136; }
+.color-yellow { color: #FFDC00; }
+
+/* Show virtual controls on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    #controls {
+        display: flex;
+    }
+}
